@@ -1,0 +1,16 @@
+bedroom
+	bathroom
+	kitchen
+
+kitchen
+	frontdoor
+	livingroom
+
+livingroom
+	basement	2	basement_flag
+
+frontdoor
+	outside
+
+outside
+	car

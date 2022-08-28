@@ -1,0 +1,21 @@
+bedroom
+	Your bed sits, tantalizing. Yet urges are meant to be overcome.
+
+bathroom
+	Every morning you curse whoever decided to not put heating in the bathroom.
+	You could put a rug or something to keep your feet off the cold tile, but you don't.
+
+kitchen
+	This is your kitchen.
+
+frontdoor
+	This is your front door.
+
+livingroom
+	This is your living room.
+
+exterior
+	This is your apartment from the outside.
+
+car
+	This is your car from the inside.
