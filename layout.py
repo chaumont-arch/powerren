@@ -1,7 +1,7 @@
-#Todo: print menu options using titles from landing, with capitalization.
+import alias_lookup
 
 def parse_layout(chapter):
-    file = open(f"layout{chapter}.txt","r")
+    file = open(f"layout{chapter}.pwrr","r")
     output = open(f"layout{chapter}.rpy","w")
 
     structure = {}
@@ -40,7 +40,8 @@ def parse_layout(chapter):
             for dest_combo in structure[object]:
                 destination = dest_combo[0]
                 evaluat = dest_combo[1] #?
-                output.write(f"\t\t\"{destination}\":\n")
+                dest_str = alias_lookup.alias_lookup(chapter,destination) # Version to print in menus
+                output.write(f"\t\t\"{dest_str}\":\n")
                 if evaluat:
                     output.write(f"\t\t\tjump {evaluat}\n")
                 else:

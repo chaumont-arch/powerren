@@ -1,60 +1,60 @@
 label bedroom_move:
 	menu
 		"Where to?"
-		"bathroom":
-			jump None_landing
-		"kitchen":
-			jump None_landing
+		"Bathroom":
+			jump bathroom_landing
+		"Kitchen":
+			jump kitchen_landing
 		"Cancel":
 			jump bedroom_landing
 
 label bathroom_move:
 	menu
 		"Where to?"
-		"bedroom":
-			jump None_landing
+		"Bedroom":
+			jump bedroom_landing
 		"Cancel":
 			jump bathroom_landing
 
 label kitchen_move:
 	menu
 		"Where to?"
-		"bedroom":
-			jump None_landing
-		"frontdoor":
-			jump None_landing
-		"livingroom":
-			jump None_landing
+		"Bedroom":
+			jump bedroom_landing
+		"Front Door":
+			jump frontdoor_landing
+		"Living Room":
+			jump livingroom_landing
 		"Cancel":
 			jump kitchen_landing
 
 label frontdoor_move:
 	menu
 		"Where to?"
-		"kitchen":
-			jump None_landing
+		"Kitchen":
+			jump kitchen_landing
 		"outside":
-			jump None_landing
+			jump outside_landing
 		"Cancel":
 			jump frontdoor_landing
 
 label livingroom_move:
 	menu
 		"Where to?"
-		"kitchen":
-			jump None_landing
+		"Kitchen":
+			jump kitchen_landing
 		"basement":
-			jump basement_flag
+			jump basement_message
 		"Cancel":
 			jump livingroom_landing
 
 label outside_move:
 	menu
 		"Where to?"
-		"frontdoor":
-			jump None_landing
-		"car":
-			jump None_landing
+		"Front Door":
+			jump frontdoor_landing
+		"Car":
+			jump car_landing
 		"Cancel":
 			jump outside_landing
 
@@ -62,7 +62,9 @@ label car_move:
 	menu
 		"Where to?"
 		"outside":
-			jump None_landing
+			jump outside_landing
+		"work":
+			jump work_message
 		"Cancel":
 			jump car_landing
 

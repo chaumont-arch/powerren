@@ -7,10 +7,13 @@ kitchen
 	livingroom
 
 livingroom
-	basement	2	basement_flag
+	basement	1	basement_message
 
 frontdoor
 	outside
 
 outside
 	car
+
+car
+	work	1	work_message
