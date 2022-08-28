@@ -44,7 +44,7 @@ def parse_layout(chapter):
                 if evaluat:
                     output.write(f"\t\t\tjump {evaluat}\n")
                 else:
-                    output.write(f"\t\t\tjump {evaluat}_landing\n")
+                    output.write(f"\t\t\tjump {destination}_landing\n")
             output.write(f"\t\t\"Cancel\":\n")
             output.write(f"\t\t\tjump {object}_landing\n\n")
 
