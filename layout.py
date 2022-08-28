@@ -1,3 +1,6 @@
+import struct
+
+
 def parse_layout(chapter):
     file = open(f"layout{chapter}.txt","r")
     output = open(f"layout{chapter}.rpy","w")
@@ -32,5 +35,17 @@ def parse_layout(chapter):
 
     for object in structure:
         print(f"{object} goes to {structure[object]}")
+        if structure[object] != []:
+            output.write(f"label {object}_move:\n")
+            output.write("\tmenu\n")
+            output.write("\t\t\"Where to?\"\n")
+            for dest_combo in structure[object]:
+                destination = dest_combo[0]
+                evaluat = dest_combo[1] #?
+                output.write(f"\t\t\"{destination}\":\n")
+                if evaluat:
+                    output.write(f"\t\t\tjump {evaluat}\n")
+                else:
+                    output.write(f"\t\t\tjump {evaluat}_landing\n")
 
 parse_layout(1)
