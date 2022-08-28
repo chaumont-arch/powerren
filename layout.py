@@ -1,5 +1,4 @@
-import struct
-
+#Todo: print menu options using titles from landing, with capitalization.
 
 def parse_layout(chapter):
     file = open(f"layout{chapter}.txt","r")
@@ -34,7 +33,6 @@ def parse_layout(chapter):
                 structure[destination].append([title,subcode])
 
     for object in structure:
-        print(f"{object} goes to {structure[object]}")
         if structure[object] != []:
             output.write(f"label {object}_move:\n")
             output.write("\tmenu\n")
@@ -47,5 +45,7 @@ def parse_layout(chapter):
                     output.write(f"\t\t\tjump {evaluat}\n")
                 else:
                     output.write(f"\t\t\tjump {evaluat}_landing\n")
+            output.write(f"\t\t\"Cancel\":\n")
+            output.write(f"\t\t\tjump {object}_landing\n\n")
 
 parse_layout(1)
