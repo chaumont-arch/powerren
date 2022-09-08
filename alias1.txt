@@ -1,7 +1,0 @@
-bedroom	Bedroom
-bathroom	Bathroom
-kitchen	Kitchen
-frontdoor	Front Door
-livingroom	Living Room
-exterior	Exterior
-car	Car
