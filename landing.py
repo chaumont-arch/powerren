@@ -10,7 +10,7 @@ def output(mode, chapter_index, message):
 
     for index in chapter_index:
         file = open(f"{mode}{index}.{format}","a")
-        file.write(message)
+        file.write(message.replace('*',index)) #? * as a wildcard for chapter index
         file.close()
 
 def parse_landing(chapter):
@@ -57,4 +57,4 @@ def parse_landing(chapter):
             title = ""
             phrases = []
 
-parse_landing("A")
+#parse_landing("A")
